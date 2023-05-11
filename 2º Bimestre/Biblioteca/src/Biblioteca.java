@@ -3,11 +3,11 @@ import java.util.List;
 
 public class Biblioteca {
     private String nome;
-    private String dono;
-    private List<Biblioteca> livros = new ArrayList();
-    private List<Biblioteca>funcionarios =new ArrayList();
+    private Dono dono;
+    private static List<Livros> livros = new ArrayList();
+    private List<Funcionarios>funcionarios = new ArrayList();
 
-    public Biblioteca(String nome, String dono) {
+    public Biblioteca(String nome, Dono dono) {
         this.nome = nome;
         this.dono = dono;
     }
@@ -17,15 +17,15 @@ public class Biblioteca {
         return nome;
     }
 
-    public String getDono() {
+    public Dono getDono() {
         return dono;
     }
 
-    public List<Biblioteca> getLivros() {
+    public List<Livros> getLivros() {
         return livros;
     }
 
-    public List<Biblioteca> getFuncionarios() {
+    public List<Funcionarios> getFuncionarios() {
         return funcionarios;
     }
 
@@ -33,15 +33,28 @@ public class Biblioteca {
         this.nome = nome;
     }
 
-    public void setDono(String dono) {
+
+    public void setDono(Dono dono) {
         this.dono = dono;
     }
 
-    public void setLivros(List<Biblioteca> livros) {
+    public void setLivros(List<Livros> livros) {
         this.livros = livros;
     }
 
-    public void setFuncionarios(List<Biblioteca> funcionarios) {
+    public void setFuncionarios(List<Funcionarios> funcionarios) {
         this.funcionarios = funcionarios;
+    }
+    public void addLivros(Livros livros){
+        this.livros.add(livros);
+    }
+    public void addFuncionarios(Funcionarios funcionarios){
+        this.funcionarios.add(funcionarios);
+    }
+
+    public void mostrarLivros (){
+        for (Livros livro: this.livros) {
+            System.out.println("Nome do livro:" + livro.getNome());
+        }
     }
 }
