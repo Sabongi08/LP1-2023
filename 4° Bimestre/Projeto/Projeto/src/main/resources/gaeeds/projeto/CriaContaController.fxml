@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5DEB3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gaeeds.projeto.CriaConta">
+   <children>
+      <Label layoutX="60.0" layoutY="117.0" text="NickName:" />
+      <TextField fx:id="nicknameUsuario" layoutX="60.0" layoutY="134.0" prefHeight="25.0" prefWidth="336.0" promptText="Digite o nick" />
+      <Label layoutX="60.0" layoutY="171.0" text="Nome:" />
+      <TextField fx:id="nomeUsuario" layoutX="60.0" layoutY="188.0" prefHeight="25.0" prefWidth="336.0" promptText="Digite seu nome" />
+      <Label layoutX="61.0" layoutY="233.0" text="Senha:" />
+      <Button fx:id="criaUsuario" layoutX="78.0" layoutY="345.0" mnemonicParsing="false" onAction="#onCriarUsuario" prefWidth="300.0" style="-fx-background-color: #DEB887;" text="Criar conta" />
+      <PasswordField fx:id="senha" layoutX="61.0" layoutY="250.0" prefWidth="336.0" promptText="Digite uma senha" />
+      <PasswordField fx:id="confirmar" layoutX="60.0" layoutY="303.0" prefWidth="336.0" promptText="Digite uma senha" />
+      <Label layoutX="61.0" layoutY="286.0" text="Confirme sua senha:" />
+      <AnchorPane prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #DEB887;">
+         <children>
+            <Label layoutX="64.0" layoutY="28.0" text="Faça seu cadastro:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
